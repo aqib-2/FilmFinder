@@ -11,15 +11,15 @@ const search = document.getElementById("search");
 getMovies(apiURL);//Invoking the function to display data on html page
 
 //function to fetch the API and get the data
-async function getMovies(URL) {
+async function getMovies(link) {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(link);
     if (response.ok) {
       const data = await response.json();
       console.log(data.results);
       showMovies(data.results);
     }
-  } catch (error) {
+  }catch(error) {
     console.log(error);
   }
 }

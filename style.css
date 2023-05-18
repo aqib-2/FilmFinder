@@ -18,10 +18,12 @@ header{
     display: flex;
     justify-content: space-between;
     background-color: var(--secondary-color);
+    flex-direction: row;
 }
 .logo{
     width:60px;
     border-radius: 10px;
+    display: block;
 }
 h1{
     padding-top: 10px;
@@ -122,4 +124,14 @@ main{
     text-align: center;
     padding: 0.5rem;
     font-weight: bold;
+}
+@media screen and (max-width:560px) {
+    .logo{
+        display: none;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
